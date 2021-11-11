@@ -1,0 +1,34 @@
+@import "../../assets/styles/scss/partials/functions";
+
+#welcome-paragraph {
+  margin: auto;
+  margin-top: em(18px);
+  width: 65%;
+  @include mq(mediumBig) {
+    width: 75%;
+  }
+  @include mq(smallMedium) {
+    font-size: 2rem;
+    width: 85%;
+  }
+}
+
+.dog-icon {
+  position: absolute;
+  margin-left: 0.4em;
+  height: 1.4em;
+}
+
+.inline-link {
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.inline-link-red {
+  color: $hero-red-deep;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,122 @@
+@import "../../assets/styles/scss/partials/mixins";
+
+.contact-title {
+  margin-top: 2em;
+}
+
+.contact-info {
+  @include general-text;
+  margin-top: 1em;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  @include mq(mediumBig) {
+    font-size: 2.2rem;
+  }
+
+  @include mq(smallMedium) {
+    font-size: 2rem;
+  }
+  @include mq(small) {
+    font-size: 1.9rem;
+  }
+}
+
+.contact-form-container {
+  @include general-text;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.contact-form {
+  display: grid;
+  grid-row-gap: 0.7em;
+  grid-column-gap: 3em;
+  grid-template-areas:
+    "label input"
+    "label input"
+    "label input"
+    "label input"
+    "null send-button";
+  @include mq(tinySmall) {
+    grid-column-gap: 2em;
+    grid-template-areas:
+      "input"
+      "input"
+      "input"
+      "input"
+      "send-button";
+  }
+
+  label {
+    grid-area: "label";
+    // margin-right: 6em
+    @include mq(mediumBig) {
+      font-size: 2.2rem;
+    }
+    @include mq(smallMedium) {
+      font-size: 2rem;
+      grid-column-gap: 1em;
+    }
+    @include mq(small) {
+      font-size: 1.9rem;
+    }
+    @include mq(tinySmall) {
+      display: none;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  textarea {
+    grid-area: "input";
+    width: 25em;
+    font-size: $medium-small-font-size;
+    padding: 0.6em;
+    border-radius: 1px;
+    border: 1px solid $main-title-color;
+    @include mq(smallMedium) {
+      font-size: 1.7rem;
+      width: 100%;
+    }
+    @include mq(small) {
+      font-size: 1.6rem;
+    }
+    @include mq(tiny) {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  textarea {
+    height: 17rem;
+    font-family: $default-font;
+  }
+
+  input[type="submit"] {
+    grid-area: "send-button";
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 2.3rem;
+    width: 9em;
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background-color: $hero-red;
+    color: white;
+    border: none;
+    @include mq(smallMedium) {
+      font-size: 2rem;
+    }
+    @include mq(tiny) {
+      font-size: 1.9rem;
+      margin: auto;
+    }
+  }
+}

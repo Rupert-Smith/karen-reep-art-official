@@ -1,0 +1,193 @@
+@import "../../assets/styles/scss/partials/variables";
+@import "../../assets/styles/scss/partials/mixins";
+
+.about-container {
+  background-color: $about-grey;
+  display: grid;
+  justify-content: center;
+  grid-column-gap: 10em;
+  line-height: 4rem;
+  padding: 9em;
+  grid-template-areas: "title image" "about image";
+
+  @include mq(medium) {
+    grid-column-gap: 7em;
+    line-height: 3.5rem;
+  }
+
+  @include mq(smallMedium) {
+    grid-column-gap: 4em;
+    line-height: 3.2rem;
+  }
+
+  @include mq(smallMedium) {
+    grid-column-gap: 6em;
+    line-height: 2.7rem;
+  }
+
+  @include mq(tinyMoreSmall) {
+    grid-template-areas: "title" "image" "about";
+  }
+
+  h2 {
+    font-size: $about-title-size;
+    color: $main-title-color;
+    text-transform: uppercase;
+    grid-area: title;
+    margin-bottom: 5rem;
+
+    @include mq(mediumBig) {
+      font-size: 3.8rem;
+      margin-bottom: 3.5rem;
+    }
+    @include mq(medium) {
+      font-size: 3.6rem;
+      margin-bottom: 3rem;
+    }
+
+    @include mq(smallMedium) {
+      font-size: 3.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @include mq(smallMedium) {
+      font-size: 3.2rem;
+      margin-bottom: 2.2rem;
+    }
+    @include mq(tinyMoreSmall) {
+      text-align: center;
+    }
+  }
+
+  h2:after {
+    display: block;
+    height: 6px;
+    background-color: $main-title-color;
+    content: " ";
+    width: 100px;
+    margin-top: 30px;
+    @include mq(mediumBig) {
+      height: 5px;
+    }
+    @include mq(medium) {
+      height: 4px;
+    }
+    @include mq(smallMedium) {
+      height: 3px;
+      margin-top: 25px;
+    }
+    @include mq(tinyMoreSmall) {
+      width: 100%;
+      height: 2px;
+      margin-top: 17px;
+    }
+  }
+
+  p {
+    font-size: $medium-font-size;
+    color: $main-title-color;
+    grid-area: about;
+    text-align: center;
+    @include mq(big) {
+      width: 26em;
+    }
+    @include mq(mediumBig) {
+      font-size: 2rem;
+      width: 100%;
+    }
+
+    @include mq(mediumLessBig) {
+      font-size: 1.8rem;
+      width: 26em;
+    }
+    @include mq(smallMedium) {
+      font-size: 1.5rem;
+      // width: 100%;
+      width: 100%;
+    }
+    @include mq(small) {
+      font-size: 1.7rem;
+      width: 23em;
+    }
+    @include mq(tinyMoreSmall) {
+      width: 100%;
+      margin-top: 2em;
+      font-size: 1.7rem;
+      line-height: 3.3rem;
+    }
+  }
+}
+
+.about-photo-container {
+  grid-area: image;
+  width: 40em;
+
+  @include mq(mediumBig) {
+    width: 35em;
+    // margin-top: 4.8em;
+  }
+
+  @include mq(medium) {
+    width: 33em;
+  }
+
+  @include mq(smallMedium) {
+    width: 24em;
+  }
+  @include mq(small) {
+    width: 22em;
+  }
+  @include mq(tinyMoreSmall) {
+    width: 33em;
+    margin: auto;
+  }
+  @include mq(tinylessSmall) {
+    width: 26em;
+  }
+  // @include mq(tinyMoreSmall) {
+  //   display: none;
+  // }
+}
+
+// .about-photo-container-mobile {
+//   display: none;
+//   // grid-area: image;
+//   width: 40em;
+//   @include mq(tinyMoreSmall) {
+//     display: inline-block;
+//   }
+// }
+
+.about-photo {
+  @include photo-shadow;
+
+  width: 40em;
+  margin-top: 4.8em;
+  object-fit: cover;
+  overflow: hidden;
+
+  @include mq(mediumBig) {
+    width: 35em;
+  }
+  @include mq(medium) {
+    width: 33em;
+  }
+
+  @include mq(smallMedium) {
+    width: 24em;
+    margin-top: 7em;
+  }
+  @include mq(small) {
+    width: 22em;
+    margin-top: 7em;
+  }
+  @include mq(tinyMoreSmall) {
+    width: 33em;
+    margin-top: 2em;
+  }
+
+  @include mq(tinylessSmall) {
+    width: 26em;
+    margin-top: 2em;
+  }
+}

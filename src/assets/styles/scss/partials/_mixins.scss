@@ -1,0 +1,33 @@
+@import "./variables";
+@use "sass:map";
+
+@mixin fixed-image {
+  background-color: white;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@mixin photo-shadow {
+  box-shadow: rgba(100, 100, 100, 0.3) 4.4px 4.4px 4.2px;
+}
+
+@mixin general-text {
+  font-size: $medium-font-size;
+  color: $main-title-color;
+}
+
+@mixin main-title {
+  font-size: $main-title-size;
+  font-family: $fancy-font;
+  font-weight: 500;
+}
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+
+  @media (max-width: $size) {
+    @content;
+  }
+}

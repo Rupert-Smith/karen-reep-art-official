@@ -1,0 +1,100 @@
+@import "../../assets/styles/scss/partials/variables";
+@import "../../assets/styles/scss/partials/mixins";
+
+.review-section {
+  margin-bottom: 6em;
+  @include mq(smallMedium) {
+    margin-bottom: 10em;
+  }
+}
+
+.review-banner {
+  @include fixed-image;
+  background-image: url("../../images/reviews/blue-collar_cropped-5.jpg");
+
+  height: 17vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include mq(small) {
+    background-image: url("../../images/reviews/blue-collar.jpg");
+    background-position: 30% 10%;
+    background-size: 155%;
+    background-repeat: no-repeat;
+  }
+
+  h2 {
+    color: white;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    @include mq(small) {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.review-block-container {
+  display: flex;
+  justify-content: space-around;
+  // height: fit-content;
+  gap: 5em;
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-top: 5em;
+
+  @include mq(mediumBig) {
+    margin-bottom: 2em;
+  }
+  @include mq(mediumLessBig) {
+    margin-bottom: 3em;
+  }
+
+  @include mq(smallMedium) {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: -2em;
+  }
+  // @include mq(small) {
+  //   margin-bottom: 2em;
+  // }
+}
+
+.review-block {
+  text-align: center;
+  // justify-content: space-around;
+  width: 27%;
+  color: $review-grey;
+  // height: 21em;
+
+  @include mq(smallMedium) {
+    // height: 18em;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 3rem;
+    margin-bottom: 0.7em;
+
+    @include mq(mediumLessBig) {
+      font-size: 2.8rem;
+    }
+  }
+
+  blockquote {
+    font-size: 2rem;
+    @include mq(mediumLessBig) {
+      font-size: 1.8rem;
+    }
+  }
+
+  cite {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../../assets/styles/scss/partials/variables";
+@import "../../../assets/styles/scss/partials/functions";
+
+.social-media-icons-color {
+  margin-top: em(30px);
+  margin-left: em(30px);
+  position: absolute;
+  // float: left;
+
+  @include mq(tinySmall) {
+    // margin-top: 10em;
+    bottom: 0;
+    margin-bottom: 1em;
+    // margin-top: 82em;
+  }
+
+  :first-child {
+    margin-left: 0px;
+  }
+  a {
+    margin-left: em(12px);
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  img {
+    width: em(50px);
+    @include mq(small) {
+      width: 3em;
+    }
+  }
+}

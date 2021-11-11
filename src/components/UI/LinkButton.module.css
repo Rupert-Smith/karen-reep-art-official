@@ -1,0 +1,7 @@
+.linkButton {
+  font-weight: 300;
+}
+
+.linkButton:hover {
+  cursor: pointer;
+}

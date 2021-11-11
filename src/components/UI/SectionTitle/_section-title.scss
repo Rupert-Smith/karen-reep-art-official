@@ -1,0 +1,18 @@
+@import "../../../assets/styles/scss/partials/mixins";
+
+.sectionTitle {
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #6a6a6a;
+
+  @include mq(medium) {
+    font-size: 2.6rem;
+  }
+  @include mq(smallMedium) {
+    font-size: 2.5rem;
+  }
+  @include mq(small) {
+    font-size: 2.3rem;
+  }
+}

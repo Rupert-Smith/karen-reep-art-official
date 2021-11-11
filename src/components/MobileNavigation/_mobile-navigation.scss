@@ -1,0 +1,43 @@
+@import "../../assets/styles/scss/partials/variables";
+@import "../../assets/styles/scss/partials/mixins";
+
+.mobile-navigation-wrapper {
+  display: none;
+  @include mq(tinySmall) {
+    background-color: rgb(255, 255, 255);
+    // width: 15em;
+    display: inline-block;
+
+    // float: right;
+    right: 0;
+    position: absolute;
+    z-index: 30;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  ul {
+    // gap: 3em;
+    width: 18em;
+    list-style: none;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul * {
+    border: rgb(231, 231, 231) solid 0.5px;
+    padding: 1em;
+    color: $main-title-color;
+    width: 100%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  ul *:hover {
+    cursor: pointer;
+    background-color: rgb(190, 190, 190);
+    border: rgb(190, 190, 190) solid 0.5px;
+    color: white;
+  }
+}

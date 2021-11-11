@@ -1,0 +1,65 @@
+// IMPORTS
+
+@use "sass:map";
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+
+@import "./functions";
+
+// COLORS
+
+$main-title-color: #707070;
+$main-title-color-dark: #636060;
+$hero-grey: #4e4e4e;
+$light-grey: #6a6a6a;
+$hero-red: #dd9999;
+$hero-red-hover: #cc8c8c;
+$hero-red-deep: #bb7676;
+$pricing: #eeeeee;
+$hero-black: #555555;
+$hero-black-hover: #424242;
+$hero-brown: #b69898;
+$hero-brown-dark: #a78181;
+$hero-brown-hover: #af8f8f;
+$three-steps-blue: #e2e9ed;
+$three-steps-blue-deep: #7aa6c0;
+$review-grey: #4d4d4d;
+$about-grey: #f5f5f5;
+$footer-grey: #acacac;
+$footer-dark-grey: #2c2c2c;
+$footer-dark-grey-text: #8b8b8b;
+
+// FONTS
+
+$default-font: "Nunito";
+$fancy-font: "Playfair Display SC";
+
+// SIZES
+
+$hero-size: 11.5rem;
+$main-title-size: 5.7rem;
+$about-title-size: 4.2rem;
+$main-subtitle-size: 3.15rem;
+$medium-font-size: 2.5rem;
+$medium-small-font-size: 2rem;
+
+// BREAKPOINTS
+
+$breakpoints: (
+  big: 1920px,
+  mediumBigger: 1524px,
+  mediumBig: 1324px,
+  mediumLessBig: 1224px,
+  medium: 1024px,
+  smallMedium: 968px,
+  footer: 975px,
+  small: 768px,
+  tinyMoreSmall: 700px,
+  tinySmall: 550px,
+  footerSmall: 532px,
+  tinylessSmall: 450px,
+  footerTiny: 442px,
+  tiny: 375px,
+);

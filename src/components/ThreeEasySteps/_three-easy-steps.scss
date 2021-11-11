@@ -1,0 +1,197 @@
+@import "../../assets/styles/scss/partials/variables";
+@import "../../assets/styles/scss/partials/mixins";
+@import "../../assets/styles/scss/partials/functions";
+
+.three-easy-steps-section {
+  background-color: $three-steps-blue;
+  // margin: auto;
+
+  @include mq(tinyMoreSmall) {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6em !important;
+  }
+}
+
+.three-easy-steps-content {
+  display: flex;
+  // margin: auto;
+  margin-top: 7em;
+
+  justify-content: center;
+
+  @include mq(tinyMoreSmall) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.steps-title-box {
+  margin-bottom: em(130px);
+}
+
+.smiling-customer-container {
+  @include photo-shadow;
+  width: fit-content;
+  height: fit-content;
+  margin-bottom: 9em;
+  width: 45em;
+  overflow: hidden;
+  // @include mq(small) {
+  //   width: 25em;
+  // }
+
+  @include mq(mediumBig) {
+    width: 31%;
+  }
+  @include mq(mediumLessBig) {
+    width: 32%;
+  }
+  @include mq(medium) {
+    width: 35%;
+  }
+  @include mq(small) {
+    width: 20em;
+  }
+  @include mq(tinyMoreSmall) {
+    width: 30em;
+    height: 30em;
+    overflow: hidden;
+    position: relative;
+    // margin-bottom: 5em;
+  }
+}
+
+.smiling-customer {
+  // object-fit: cover;
+  width: 100%;
+  // overflow: hidden;
+
+  @include mq(small) {
+    // width: 20em;
+    // height: 25em;
+  }
+  @include mq(tinySmall) {
+    width: 29em;
+    height: 38em;
+    margin-bottom: 3em;
+  }
+  @include mq(tinyMoreSmall) {
+    position: absolute;
+    width: 100%;
+    top: -3em;
+  }
+}
+
+.step-number-container {
+  margin-left: 9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5.5em;
+  margin-bottom: em(130px);
+  // }
+
+  @include mq(mediumBig) {
+    margin-left: 4em;
+  }
+
+  @include mq(medium) {
+    margin-left: 3em;
+    gap: 5.5em;
+  }
+
+  @include mq(small) {
+    margin-left: 3em;
+    gap: 5.5em;
+  }
+
+  @include mq(tinySmall) {
+    margin-left: 3em;
+    gap: 4em;
+    margin-bottom: 0;
+    overflow: hidden;
+  }
+
+  @include mq(tinyMoreSmall) {
+    margin-top: -3em;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    margin-right: 0.6em;
+  }
+}
+
+.step-content {
+  font-size: $medium-font-size;
+  color: $light-grey;
+  width: 21em;
+
+  @include mq(mediumBig) {
+    font-size: 2.4rem;
+  }
+  @include mq(mediumLessBig) {
+    font-size: 2.3rem;
+  }
+
+  @include mq(smallMedium) {
+    font-size: 2rem;
+    width: 15em;
+  }
+
+  @include mq(small) {
+    font-size: 1.9rem;
+    width: 13em;
+  }
+  @include mq(tinyMoreSmall) {
+    font-size: 2rem;
+    width: 90%;
+    overflow: hidden;
+  }
+
+  @include mq(tinySmall) {
+    font-size: 1.7rem;
+    width: 15em;
+  }
+
+  // @include mq(tinyMoreSmall) {
+  //   font-size: 2.2rem;
+  //   width: 90%;
+  // }
+
+  // padding-top: 1.6em;
+  // white-space: nowrap;
+
+  // width: 40%;\
+}
+
+.inline-link-blue {
+  color: $three-steps-blue-deep;
+}
+
+.step-number {
+  font-size: 6rem;
+  @include mq(mediumBig) {
+    font-size: 5rem;
+  }
+  @include mq(mediumLessBig) {
+    font-size: 4rem;
+  }
+
+  @include mq(small) {
+    font-size: 3rem;
+  }
+
+  @include mq(tinyMoreSmall) {
+    font-size: 4rem;
+  }
+  @include mq(tinySmall) {
+    font-size: 3rem;
+  }
+
+  @include mq(tiny) {
+    font-size: 3rem;
+  }
+}

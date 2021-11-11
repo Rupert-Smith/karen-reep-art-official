@@ -1,0 +1,40 @@
+#gallery-photos {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.gallery-title {
+  font-weight: 600 !important;
+  text-transform: uppercase;
+}
+
+.gallery-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-bottom: 5em;
+  overflow: auto;
+  display: block;
+  width: 100%;
+  min-height: "1px";
+}
+
+.gallery-wrapper::before {
+  content: " ";
+  display: block;
+  white-space: pre;
+}
+
+.ReactGridGallery {
+  margin-top: 5em;
+}
+
+.image-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.image-overlay:hover {
+  cursor: pointer;
+}

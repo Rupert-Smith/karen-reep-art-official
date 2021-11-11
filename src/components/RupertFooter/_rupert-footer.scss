@@ -1,0 +1,15 @@
+@import "../../assets/styles/scss/partials/variables";
+@import "../../assets/styles/scss/partials/mixins";
+
+.rupertfooter-container {
+  text-align: center;
+  background-color: $footer-dark-grey;
+  color: $footer-dark-grey-text;
+  font-size: $medium-small-font-size;
+  font-weight: 300;
+  padding: 1em;
+
+  @include mq(smallMedium) {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,21 @@
+@import "../partials/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: white;
+  font-family: $default-font;
+  width: 100%;
+  overflow-x: hidden;
+}

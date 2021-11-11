@@ -1,0 +1,87 @@
+@import "../../../assets/styles/scss/partials/variables";
+@import "../../../assets/styles/scss/partials/mixins";
+@import "../../../assets/styles/scss/partials/functions";
+
+.main-title {
+  @include main-title;
+  font-size: $main-title-size;
+  color: $main-title-color;
+  margin-bottom: em(5px);
+  @include mq(smallMedium) {
+    font-size: 4.3rem;
+    margin-bottom: 0.3em;
+  }
+  @include mq(small) {
+    font-size: 4.3rem;
+    margin-bottom: 0.3em;
+  }
+  @include mq(tinySmall) {
+    font-size: 3.7rem;
+    text-align: left;
+    // margin-left: 0.8em;
+  }
+}
+
+.main-subtitle {
+  color: $main-title-color;
+  font-family: $fancy-font;
+  font-size: $main-subtitle-size;
+  font-weight: 400;
+  margin-bottom: em(5px);
+  @include mq(smallMedium) {
+    font-size: 2.6rem;
+  }
+  @include mq(tinySmall) {
+    display: none;
+  }
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: em(330px);
+  background-color: white;
+  justify-content: center;
+  @include mq(small) {
+    height: 18em;
+  }
+
+  @include mq(tinySmall) {
+    height: 10em;
+    flex-direction: row;
+    gap: 6%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @include mq(tinylessSmall) {
+    height: 10em;
+    flex-direction: row;
+    gap: 4%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.hamburger-menu {
+  display: none;
+  margin-top: 0.3em;
+  font-size: 7rem;
+  color: $main-title-color;
+
+  @include mq(tinySmall) {
+    display: block;
+    font-size: 5rem;
+  }
+
+  @include mq(tinylessSmall) {
+    display: block;
+    font-size: 4rem;
+  }
+}
+
+.hamburger-menu:hover {
+  cursor: pointer;
+  color: $main-title-color-dark;
+}

@@ -1,0 +1,88 @@
+@import "../../assets/styles/scss/partials/variables";
+@import "../../assets/styles/scss/partials/mixins";
+@import "../../assets/styles/scss/partials/functions";
+
+.pricing-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  padding: 5em;
+  align-items: center;
+
+  @include mq(smallMedium) {
+    padding: 4em;
+    gap: 7%;
+  }
+  @include mq(small) {
+    padding: 1em;
+    padding-top: 3em;
+    gap: 7%;
+  }
+  @include mq(small) {
+    flex-direction: column;
+  }
+}
+
+.pricing-image {
+  @include photo-shadow;
+  width: 30em;
+  @include mq(medium) {
+    width: 30%;
+  }
+  @include mq(smallMedium) {
+    width: 20em;
+  }
+  @include mq(small) {
+    width: 19em;
+    display: none;
+  }
+}
+
+.pricing-image-mobile {
+  display: none;
+  @include photo-shadow;
+  width: 23em;
+  @include mq(small) {
+    margin-bottom: 4em;
+    display: inline-block;
+  }
+}
+
+#pricing-paragraph {
+  ul {
+    list-style: none;
+  }
+
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 8rem;
+
+  @include mq(mediumLessBig) {
+    line-height: 6rem;
+    font-size: 2.1rem;
+  }
+  @include mq(medium) {
+    line-height: 5rem;
+    font-size: 1.9rem;
+  }
+  @include mq(smallMedium) {
+    line-height: 5rem;
+    font-size: 1.7rem;
+  }
+  @include mq(small) {
+    line-height: 4.5rem;
+    font-size: 1.7rem;
+
+    li {
+      margin-bottom: 1em;
+    }
+  }
+  // @include mq(tinyMoreSmall) {
+  //   line-height: 3rem;
+  //   font-size: 1.6rem;
+  // }
+}
+
+#pricing {
+  background-color: $pricing;
+}
